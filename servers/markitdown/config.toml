@@ -1,0 +1,10 @@
+# Default configuration for the MarkItDown MCP server
+[server]
+name = "markitdown"
+protocol = "stdio"
+command = ["python", "-m", "markitdown_mcp"]
+
+[http]
+host = "127.0.0.1"
+port = 3001
+

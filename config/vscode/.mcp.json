@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "markitdown": {
+      "command": [
+        "python",
+        "scripts/run_markitdown.py",
+        "--protocol",
+        "stdio",
+        "--yes"
+      ],
+      "transport": "stdio",
+      "env": {
+        "PYTHONPATH": "."
+      },
+      "enabled": true
+    },
+    "markitdown-http": {
+      "transport": "http",
+      "httpUrl": "http://127.0.0.1:3001",
+      "enabled": false
+    }
+  }
+}

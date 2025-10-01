@@ -1,0 +1,38 @@
+{
+  "github.copilot.mcpServers": [
+    {
+      "id": "markitdown-local",
+      "displayName": "MarkItDown (local stdio)",
+      "transport": "stdio",
+      "command": [
+        "${workspaceFolder}/.venv/Scripts/python.exe",
+        "${workspaceFolder}/scripts/run_markitdown.py",
+        "--protocol",
+        "stdio",
+        "--yes"
+      ],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "autoStart": false
+    },
+    {
+      "id": "markitdown-http",
+      "displayName": "MarkItDown (local http)",
+      "transport": "http",
+      "httpUrl": "http://127.0.0.1:3001",
+      "command": [
+        "${workspaceFolder}/.venv/Scripts/python.exe",
+        "${workspaceFolder}/scripts/run_markitdown.py",
+        "--protocol",
+        "http",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "3001",
+        "--yes"
+      ],
+      "autoStart": false
+    }
+  ]
+}

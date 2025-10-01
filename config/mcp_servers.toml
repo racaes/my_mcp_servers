@@ -1,0 +1,15 @@
+# Global registry of MCP servers managed by this toolkit.
+
+[markitdown]
+label = "MarkItDown MCP"
+script = "scripts.run_markitdown:main"
+protocol = "stdio"
+config = "servers/markitdown/config.toml"
+http_host = "127.0.0.1"
+http_port = 3001
+
+[other_server_template]
+label = "Other Server (template)"
+script = "scripts.run_server:main"
+protocol = "stdio"
+config = "servers/other_server_template/config.toml"

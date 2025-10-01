@@ -1,0 +1,13 @@
+# Configuration template for future MCP servers.
+[server]
+name = "other-server"
+protocol = "stdio"
+command = ["python", "-m", "your_module.server"]
+
+[http]
+host = "127.0.0.1"
+port = 3999
+reload = false
+
+[logging]
+level = "INFO"
