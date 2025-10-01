@@ -2,6 +2,8 @@
 
 Reusable Python toolkit for launching Model Context Protocol (MCP) servers — starting with **MarkItDown** and ready for future adapters.
 
+> ℹ️ Until the stable release lands, the toolkit targets `markitdown-mcp 0.0.1a4`. Pip will pull that pre-release automatically because the version is pinned explicitly in `pyproject.toml`.
+
 ## Features
 
 - 🚀 One-command launchers for STDIO and HTTP transports powered by the official `markitdown-mcp`

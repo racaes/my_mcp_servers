@@ -2,12 +2,17 @@
 
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 from typing import Optional
 
 import typer
 from rich.console import Console
 from rich.prompt import Confirm
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from servers.markitdown.app import launch, load_config
 

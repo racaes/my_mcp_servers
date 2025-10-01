@@ -13,7 +13,7 @@ This document captures implementation details for the bundled MarkItDown server 
 
 | Package           | Reason                                                   |
 |-------------------|----------------------------------------------------------|
-| `markitdown-mcp`  | Official Microsoft launcher for the MarkItDown MCP      |
+| `markitdown-mcp`  | Official Microsoft launcher for the MarkItDown MCP (currently released as `0.0.1a4`) |
 | `markitdown`      | Underlying conversion logic (transitive via the MCP CLI) |
 | `mcp`             | Core Model Context Protocol types and utilities          |
 | `typer`           | User-friendly CLI definition for launch scripts          |

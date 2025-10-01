@@ -57,10 +57,22 @@ def load_config(config_path: Path | None) -> ConfigBundle:
     return ConfigBundle.model_validate(data)
 
 
+def _normalize_command(command: List[str]) -> List[str]:
+    if not command:
+        return [sys.executable, "-m", "markitdown_mcp"]
+
+    launcher = command[0]
+    lower = launcher.lower()
+    if lower in {"python", "python.exe", "py", "py.exe"}:
+        launcher = sys.executable
+
+    return [launcher, *command[1:]]
+
+
 def build_launch_command(bundle: ConfigBundle, protocol: str) -> List[str]:
     """Return the command line for invoking markitdown-mcp with the desired protocol."""
 
-    cmd = list(bundle.server.command)
+    cmd = _normalize_command(list(bundle.server.command))
 
     if protocol == "stdio":
         return cmd
